@@ -1,0 +1,5 @@
+<form action="{% url 'order_update' form.instance.id %}" method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Підтвердити</button>
+</form>

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="f23c6e7e-b5ea-4e61-a575-fa521679ded2" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/cafe" />
+  </component>
+  <component name="IgnoredFileRootStore">
+    <option name="generatedRoots">
+      <set>
+        <option value="$PROJECT_DIR$/.idea" />
+      </set>
+    </option>
+  </component>
+  <component name="ProjectId" id="1VTydjAJzhbOPML2NB4v8EcBNqN" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+    </key>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="f23c6e7e-b5ea-4e61-a575-fa521679ded2" name="Default Changelist" comment="" />
+      <created>1577291508175</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1577291508175</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <ignored-roots>
+      <path value="$PROJECT_DIR$" />
+      <path value="$PROJECT_DIR$/cafe" />
+    </ignored-roots>
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="402" y="194" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1579806991851">
+      <screen x="0" y="0" width="1366" height="703" />
+    </state>
+    <state x="402" y="194" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1366.703@0.0.1366.703" timestamp="1579806991851" />
+    <state x="192" y="0" key="SettingsEditor" timestamp="1581273332304">
+      <screen x="0" y="0" width="1366" height="700" />
+    </state>
+    <state x="192" y="0" key="SettingsEditor/0.0.1366.700@0.0.1366.700" timestamp="1581273332304" />
+    <state x="275" y="109" width="816" height="550" key="find.popup" timestamp="1578318123958">
+      <screen x="0" y="0" width="1366" height="700" />
+    </state>
+    <state x="275" y="109" width="816" height="550" key="find.popup/0.0.1366.700@0.0.1366.700" timestamp="1578318123958" />
+  </component>
+</project>

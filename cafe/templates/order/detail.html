@@ -1,0 +1,30 @@
+<style>
+table, th, td {
+   border: 1px solid black;
+  border-collapse: collapse;
+}
+th, td {
+  padding: 5px;
+}
+th {
+  text-align: left;
+}
+</style>
+<p>Author: {{ article.profile}}</p>
+<table style="width:100%">
+     <tr>
+         <th>Firstname</th>
+         <th>Lastname</th>
+         <th>Phone number</th>
+         <th>Description</th>
+     </tr>
+     <tr>
+         <td>{{ order.Name }}</td>
+         <td>{{ order.Second_Name }}</td>
+         <td>{{ order.PhoneNumber }}</td>
+         <td>{{ order.Description }}</td>
+     </tr>
+</table>
+<hr>
+ <a href="{% url 'order_update' order.id %}">Оновити</a>
+ <a href="{% url 'order_delete' order.id %}">Видалити</a>

@@ -27,7 +27,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+    <property name="settings.editor.selected.configurable" value="settings.github" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -70,10 +70,10 @@
       <screen x="0" y="0" width="1366" height="703" />
     </state>
     <state x="402" y="194" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1366.703@0.0.1366.703" timestamp="1579806991851" />
-    <state x="192" y="0" key="SettingsEditor" timestamp="1581273332304">
+    <state x="192" y="0" key="SettingsEditor" timestamp="1581285618105">
       <screen x="0" y="0" width="1366" height="700" />
     </state>
-    <state x="192" y="0" key="SettingsEditor/0.0.1366.700@0.0.1366.700" timestamp="1581273332304" />
+    <state x="192" y="0" key="SettingsEditor/0.0.1366.700@0.0.1366.700" timestamp="1581285618105" />
     <state x="275" y="109" width="816" height="550" key="find.popup" timestamp="1578318123958">
       <screen x="0" y="0" width="1366" height="700" />
     </state>

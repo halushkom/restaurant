@@ -13,17 +13,21 @@ th {
 <p>Author: {{ article.profile}}</p>
 <table style="width:100%">
      <tr>
-         <th>Firstname</th>
-         <th>Lastname</th>
-         <th>Phone number</th>
-         <th>Description</th>
-     </tr>
-     <tr>
-         <td>{{ order.Name }}</td>
-         <td>{{ order.Second_Name }}</td>
-         <td>{{ order.PhoneNumber }}</td>
-         <td>{{ order.Description }}</td>
-     </tr>
+            <th>Ім'я</th>
+            <th>Номер телефону</th>
+            <th>К-сть осіб</th>
+            <th>Дата</th>
+            <th>Час</th>
+            <th>Mail</th>
+        </tr>
+        <tr>
+            <td><a href="{% url 'order_detail' order.id %}">{{ order.Name }} </a>
+            <td>{{ order.PhoneNumber }}</td>
+            <td>{{ order.Choice }}</td>
+            <td>{{ order.Data }}</td>
+            <td>{{ order.Time }}</td>
+            <td>{{ order.Mail}}</td>
+        </tr>
 </table>
 <hr>
  <a href="{% url 'order_update' order.id %}">Оновити</a>

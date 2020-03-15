@@ -1,18 +1,22 @@
 from django import forms
 from order.models import Order
-
+from datetime import *
 class OrderForm(forms.ModelForm):
-    Name = forms.CharField(required = True, help_text = "Введіть своє ім'я")
-    Second_Name = forms.CharField(required = True, help_text = "Введіть своє Прізвище")
-    PhoneNumber = forms.CharField(required = True, help_text = "Введіть номер мобільного")
-    Description = forms.CharField(required = True, widget = forms.Textarea)
-    Data_Time = forms.DateTimeField()
+    choice = [
+        ('1','1 персона'), ('2','2 персони'), ('3','3 персони'), ('4','4 персони'), ('5','5 персон'), ('6','6 персон')
+    ]
+    Name = forms.CharField(required = True )
+    PhoneNumber = forms.CharField(required = True)
+    Mail = forms.EmailField()
+    Date = forms.DateField(widget=forms.SelectDateWidget)
+    Time = forms.TimeInput(format='%H:%M')
+    Choice = forms.ChoiceField(choices=choice)
     class Meta:
         model = Order
-        fields = ('Name', 'Second_Name', 'PhoneNumber', 'Description')
+        fields = ('Name', 'PhoneNumber', 'Choice', 'Date', 'Time')
         labels = {
             'Name': "Ім'я",
-            'SecondName': 'Прізвище',
             'PhoneNumber': 'Номер мобільного',
-            'Description': 'Повідомлення',
+            'Choice': 'Вибір',
+            'Time': 'Час'
         }

@@ -2,7 +2,7 @@ from django.contrib import admin
 from order.models import Order
 
 admin.site.register(Order)
-#class MakeOrder(admin.ModelAdmin):
-    #list_display = ('Name', 'Second_Name', 'PhoneNumber', 'Description')
-    #list_filter = ('status', 'created', 'publish', 'author')
+class Order(admin.ModelAdmin):
+    list_display = ('Name', 'PhoneNumber', 'Choice', 'Data', 'Time')
+    list_filter = ('Choice', 'Data')
     #search_fields = ('Name', 'Second_Name', 'PhoneNumber')

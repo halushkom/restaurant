@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+
+</style>
+</head>
+<body>
+
+{% if user.is_authenticated %}
+
+    Привіт, {{ user.username }}
+    {% comment %}
+    <a href="{% url 'profile' %}">Профіль</a>
+    {% endcomment %}
+    <a href="{% url 'logout' %}">Вийти</a>
+{% else %}
+    Ввійдіть будь-ласка
+    <a href="{% url 'login' %}">Ввійти</a>
+    <a href="{% url 'signup' %}">Зареєструватися</a>
+{% endif%}
+<hr>
+    <a href="{% url 'create' %}">Створити</a>
+
+    <a href="{% url 'order_create' %}">Замовити</a>
+
+    <a href="{% url 'order.html' %}">Мої замовлення</a>
+
+
+<hr>
+    {% block content %}
+    {% endblock %}
+
+{% for order in orders %}
+    <a href="{% url 'order_detail' order.id %}">{{ order.Name }} </a>
+
+{% endfor %}
+
+{% for article in articles %}
+    <a href="{% url 'detail' article.id %}"> {{ article.title }}</a>
+    <br>
+    {{ article.description }}
+    <hr>
+{% endfor %}
+<br>
+
+
+</body>
+</html>

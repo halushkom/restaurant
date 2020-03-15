@@ -40,10 +40,12 @@ INSTALLED_APPS = [
     'article.apps.ArticleConfig',
     'account.apps.AccountConfig',
     'order.apps.OrderConfig',
-    'bootstrap4',
     'ckeditor',
     'ckeditor_uploader',
+    'crispy_forms',
 ]
+
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',

@@ -38,7 +38,8 @@ urlpatterns = [
     path('ckeditor/', include('ckeditor_uploader.urls')),
     #Making order
     path('order/', OrderView.as_view(), name="order.html"),
-    path('order/create', OrderCreateView.as_view(), name="order_create"),
+    #path('order/create', OrderCreateView.as_view(), name="order_create"),
+    path('reservation', OrderCreateView.as_view(), name="reservation"),
     path('order/<int:order_id>', OrderDetailView.as_view(), name="order_detail"),
     path('order/update/<int:order_id>', OrderUpdateView.as_view(), name='order_update'),
     path('order/delete/<int:order_id>', OrderDeleteView.as_view(), name='order_delete'),

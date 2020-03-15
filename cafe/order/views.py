@@ -3,7 +3,7 @@ from order.models import Order
 from django.views.generic import ListView, CreateView, DetailView, UpdateView, DeleteView
 from order.form import OrderForm
 from django.urls import reverse
-from account.models import Profile
+
 
 # Create your views here.
 class OrderView(ListView):
@@ -20,15 +20,9 @@ class OrderView(ListView):
 
 class OrderCreateView(CreateView):
     model = Order
-    template_name = 'order/create.html'
+    template_name = 'order/reservation.html'
     context_object_name = 'order'
     form_class = OrderForm
-
-    # добавлення автора публікації
-    def form_valid(self, form):
-        profile = Profile.objects.get(user = self.request.user)
-        form.instance.author = profile
-        return super(OrderCreateView, self).form_valid(form)
 
     def get_success_url(self):
         return reverse('order_detail', args=(self.object.id,))
@@ -53,3 +47,4 @@ class OrderDetailView(DetailView):
     template_name = 'order/detail.html'
     context_object_name = 'order'
     pk_url_kwarg = 'order_id'
+

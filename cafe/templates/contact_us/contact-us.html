@@ -3,25 +3,25 @@
   <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<link rel="apple-touch-icon" sizes="180x180" href="assets/ico/apple-touch-icon.png">
-	<link rel="icon" type="image/png" sizes="32x32" href="assets/ico/favicon-32x32.png">
-	<link rel="icon" type="image/png" sizes="16x16" href="assets/ico/favicon-16x16.png">
-	<link rel="manifest" href="assets/ico/manifest.json">
-	<link rel="mask-icon" href="assets/ico/safari-pinned-tab.svg" color="#5bbad5">
-	<link rel="shortcut icon" href="assets/ico/favicon.ico">
-	<meta name="msapplication-config" content="assets/ico/browserconfig.xml">
+	<link rel="apple-touch-icon" sizes="180x180" href="../../static/assets/ico/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="../../static/assets/ico/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="../../static/assets/ico/favicon-16x16.png">
+	<link rel="manifest" href="../../static/assets/ico/manifest.json">
+	<link rel="mask-icon" href="../../static/assets/ico/safari-pinned-tab.svg" color="#5bbad5">
+	<link rel="shortcut icon" href="../../static/assets/ico/favicon.ico">
+	<meta name="msapplication-config" content="../../static/assets/ico/browserconfig.xml">
 	<meta name="theme-color" content="#ffffff">
 
-	<title>Touché - Café & Restaurant Template</title>
+	<title>Оксана - Restaurant</title>
 
 	<!-- CSS Plugins -->
-	<link rel="stylesheet" href="assets/plugins/font-awesome/css/all.min.css">
-	<link rel="stylesheet" href="assets/plugins/lightbox/css/lightbox.min.css">
-	<link rel="stylesheet" href="assets/plugins/flickity/flickity.min.css">
+	<link rel="stylesheet" href="../../static/assets/plugins/font-awesome/css/all.min.css">
+	<link rel="stylesheet" href="../../static/assets/plugins/lightbox/css/lightbox.min.css">
+	<link rel="stylesheet" href="../../static/assets/plugins/flickity/flickity.min.css">
 
 	<!-- CSS Global -->
 	<!-- build:css assets/css/theme.min.css -->
-	<link rel="stylesheet" href="assets/css/theme.css">
+	<link rel="stylesheet" href="../../static/assets/css/theme.css">
 	<!-- endbuild -->
 
   </head>
@@ -33,7 +33,7 @@
 		<div class="container">
 
 			<!-- Navbar: Brand -->
-			<a class="navbar-brand navbar-brand_2 d-lg-none" href="index.html">Оксана</a>
+			<a class="navbar-brand navbar-brand_2 d-lg-none" href="{% url 'index' %}">Оксана</a>
 
 			<!-- Navbar: Toggler -->
 			<button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -46,7 +46,7 @@
 				<!-- Navbar navigation: Left -->
 				<ul class="navbar-nav mr-auto">
 					<li class="nav-item">
-						<a class="nav-link" href="about-us.html">Про нас</a>
+						<a class="nav-link" href="{% url 'about-us' %}">Про нас</a>
 					</li>
 					<li class="nav-item dropdown">
 						<a class="nav-link dropdown-toggle" href="http://example.com" id="nav-item__menu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -57,12 +57,12 @@
 						</div>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="reservation.html">Зарезервувати</a>
+						<a class="nav-link" href="{% url 'reservation' %}">Зарезервувати</a>
 					</li>
 				</ul>
 
 				<!-- Brand name -->
-				<a class="navbar-brand navbar-brand_2 d-none d-lg-flex" href="index.html">
+				<a class="navbar-brand navbar-brand_2 d-none d-lg-flex" href="{% url 'index' %}">
 					Оксана
 				</a>
 
@@ -75,7 +75,7 @@
 						<a class="nav-link" href="gallery.html">Галерея</a>
 					</li>
 					<li class="nav-item active">
-						<a class="nav-link" href="contact-us.html">Контакти</a>
+						<a class="nav-link" href="{% url 'contact-us' %}">Контакти</a>
 					</li>
 				</ul>
 
@@ -86,7 +86,7 @@
 
 	<!-- HEADER
 	================================================== -->
-	<section class="section section_header" data-parallax="scroll" data-image-src="assets/img/37.jpg">
+	<section class="section section_header" data-parallax="scroll" data-image-src="../../static/assets/img/37.jpg">
 		<div class="container">
 			<div class="row">
 				<div class="col">
@@ -171,18 +171,18 @@
 					<!-- Contact form -->
 					<form class="section_contact__form" id="contact__form">
 						<div class="form-group">
-							<label for="contact__form__name" class="sr-only">Ім'я</label>
-							<input type="text" class="form-control" id="contact__form__name" name="contact__form__name" placeholder="Ім'я">
+							<label for="contact__form" class="sr-only">Ім'я</label>
+							<input type="text" class="form-control" name="Name" placeholder="Ім'я">
 							<div class="invalid-feedback"></div>
 						</div>
 						<div class="form-group">
-							<label for="contact__form__email" class="sr-only">E-mail </label>
-							<input type="email" class="form-control" id="contact__form__email" name="contact__form__email" placeholder="E-mail address">
+							<label for="contact__form" class="sr-only">E-mail </label>
+							<input type="email" class="form-control" name="Mail" placeholder="E-mail address">
 							<div class="invalid-feedback"></div>
 						</div>
 						<div class="form-group">
-							<label for="contact__form__email" class="sr-only">Повідомлення</label>
-							<textarea class="form-control" id="contact__form__message" name="contact__form__message" rows="9" placeholder="Повідомлення"></textarea>
+							<label for="contact__form" class="sr-only">Повідомлення</label>
+							<textarea class="form-control" name="Message" rows="9" placeholder="Повідомлення"></textarea>
 							<div class="invalid-feedback"></div>
 						</div>
 						<button type="submit" class="btn btn-primary">
@@ -271,24 +271,24 @@
 
 	<!-- JS Global -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-	<script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>
+	<script src="../../static/assets/bootstrap/js/bootstrap.bundle.min.js"></script>
 	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCnKt8_N4-FKOnhI_pSaDL7g_g-XI1-R9E"></script>
 
 	<!-- JS Plugins -->
-	<script src="assets/plugins/parallax/parallax.min.js"></script>
-	<script src="assets/plugins/isotope/lib/imagesloaded.pkgd.min.js"></script>
-	<script src="assets/plugins/isotope/isotope.pkgd.min.js"></script>
-	<script src="assets/plugins/flickity/flickity.pkgd.min.js"></script>
-	<script src="assets/plugins/lightbox/js/lightbox.min.js"></script>
-	<script src="assets/plugins/reservation/reservation.js"></script>
-	<script src="assets/plugins/contact/contact.js"></script>
-	<script src="assets/plugins/alerts/alerts.js"></script>
+	<script src="../../static/assets/plugins/parallax/parallax.min.js"></script>
+	<script src="../../static/assets/plugins/isotope/lib/imagesloaded.pkgd.min.js"></script>
+	<script src="../../static/assets/plugins/isotope/isotope.pkgd.min.js"></script>
+	<script src="../../static/assets/plugins/flickity/flickity.pkgd.min.js"></script>
+	<script src="../../static/assets/plugins/lightbox/js/lightbox.min.js"></script>
+	<script src="../../static/assets/plugins/reservation/reservation.js"></script>
+	<script src="../../static/assets/plugins/contact/contact.js"></script>
+	<script src="../../static/assets/plugins/alerts/alerts.js"></script>
 
 	<!-- JS Custom -->
 	<!-- build:js assets/js/theme.min.js -->
-	<script src="assets/js/theme.js"></script>
+	<script src="../../static/assets/js/theme.js"></script>
 	<!-- endbuild -->
-	<script src="assets/js/custom.js"></script>
+	<script src="../../static/assets/js/custom.js"></script>
 
   </body>
 </html>

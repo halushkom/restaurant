@@ -25,11 +25,9 @@ SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', 'ht^hj3j&!*amsxutnq(a=xhwxi0twn
 # SECURITY WARNING: don't run with debug turned on in production!
 #DEBUG = True
 DEBUG = bool( os.environ.get('DJANGO_DEBUG', True) )
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = []
 
-SECURE_SSL_REDIRECT = True
-SESSION_COOKIE_SECURE = True
-CSRF_COOKIE_SECURE = True
+SECURE_SSL_REDIRECT = False
 # Application definition
 
 INSTALLED_APPS = [
@@ -42,12 +40,14 @@ INSTALLED_APPS = [
     'article.apps.ArticleConfig',
     'account.apps.AccountConfig',
     'order.apps.OrderConfig',
+    'about_us.apps.AboutUsConfig',
+    'contact_us.apps.ContactUsConfig',
     'ckeditor',
     'ckeditor_uploader',
-    'crispy_forms',
+
 ]
 
-CRISPY_TEMPLATE_PACK = 'bootstrap4'
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',

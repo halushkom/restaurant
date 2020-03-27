@@ -19,6 +19,8 @@ from django.conf.urls.static import static
 from django.conf import settings
 from article.views import IndexView, ArticleCreateView, ArticleDetailView, ArticleUpdateView, ArticleDeleteView
 from order.views import OrderView, OrderCreateView, OrderDetailView, OrderUpdateView, OrderDeleteView
+from about_us.views import AboutView
+from contact_us.views import ContactView
 from account.views import ProfileDetailView, SignUP
 
 
@@ -43,4 +45,9 @@ urlpatterns = [
     path('order/<int:order_id>', OrderDetailView.as_view(), name="order_detail"),
     path('order/update/<int:order_id>', OrderUpdateView.as_view(), name='order_update'),
     path('order/delete/<int:order_id>', OrderDeleteView.as_view(), name='order_delete'),
+    #About us
+    path('about-us', AboutView.as_view(), name="about-us"),
+    #Contact us
+    path('contact-us', ContactView.as_view(), name="contact-us"),
+
 ] + static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT )

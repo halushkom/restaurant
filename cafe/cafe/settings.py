@@ -25,9 +25,13 @@ SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', 'ht^hj3j&!*amsxutnq(a=xhwxi0twn
 # SECURITY WARNING: don't run with debug turned on in production!
 #DEBUG = True
 DEBUG = bool( os.environ.get('DJANGO_DEBUG', True) )
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['mhalushko.pythonanywhere.com']
 
-SECURE_SSL_REDIRECT = False
+SECURE_SSL_REDIRECT = True
+CSRF_COOKIE_SECURE = True
+SESSION_COOKIE_SECURE = True
+
+
 # Application definition
 
 INSTALLED_APPS = [

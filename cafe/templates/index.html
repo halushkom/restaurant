@@ -29,61 +29,9 @@
 
 	<!-- NAVBAR
 	================================================== -->
-	<nav class="navbar navbar-light navbar-expand-lg fixed-top">
-		<div class="container">
+	{% include "include/navbar.html"%}
 
-			<!-- Navbar: Brand -->
-			<a class="navbar-brand d-lg-none" href="{% url 'index' %}">Оксана</a>
-
-			<!-- Navbar: Toggler -->
-			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-				<span class="navbar-toggler-icon"></span>
-			</button>
-			
-			<!-- Navbar: Collapse -->
-			<div class="collapse navbar-collapse" id="navbarSupportedContent">
-
-				<!-- Navbar navigation: Left -->
-				<ul class="navbar-nav mr-auto">
-					<li class="nav-item">
-						<a class="nav-link" href="{% url 'about-us' %}">Про нас</a>
-					</li>
-					<li class="nav-item dropdown">
-						<a class="nav-link dropdown-toggle" href="http://example.com" id="nav-item__menu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-							Меню
-						</a>
-						<div class="dropdown-menu" aria-labelledby="nav-item__menu">
-							<a class="dropdown-item" href="menu.html">Меню</a>
-
-						</div>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="{% url 'reservation' %}">Зарезервувати</a>
-					</li>
-				</ul>
-
-				<!-- Navbar: Brand -->
-				<a class="navbar-brand d-none d-lg-flex" href="{% url 'index' %}">
-					Оксана
-				</a>
-
-				<!-- Navbar navigation: Right -->
-				<ul class="navbar-nav ml-auto">
-					<li class="nav-item">
-						<a class="nav-link" href="news-and-events.html">Новини & Події</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="gallery.html">Галерея</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="{% url 'contact-us' %}">Контакти</a>
-					</li>
-				</ul>
-
-			</div> <!-- / .navbar-collapse -->
-
-		</div> <!-- / .container -->
-	</nav> <!-- / .navbar -->
+	<!-- / .navbar -->
 
 	<!-- WELCOME
 	================================================== -->
@@ -171,8 +119,8 @@
 						Наше меню
 					</h2>
 					<p class="section__subheading text-center">
-						Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-						Ratione numquam eos perferendis itaque hic unde, ad, laudantium minima.
+						Кухня українська та європейська. Ми впевнені, що ти знайдеш для себе багато цікавого, відкриєш нові смаки та поринеш в океан несамовитої насолоди.
+
 					</p>
 	
 				</div>
@@ -184,16 +132,16 @@
 					<nav class="section_menu__nav">
 						<ul>
 							<li class="active">
-								<a href="#menu_images" data-filter=".mains">Основні</a>
+								<a href="#menu_images" data-filter=".mains">Основні страви</a>
 							</li>
 							<li>
-								<a href="#menu_images" data-filter=".lunch">Ланч</a>
+								<a href="#menu_images" data-filter=".salad">Салати та закуски</a>
 							</li>
 							<li>
-								<a href="#menu_images" data-filter=".dinner">Обід</a>
+								<a href="#menu_images" data-filter=".pizza">Піца</a>
 							</li>
 							<li>
-								<a href="#menu_images" data-filter=".drinks">Напитки</a>
+								<a href="#menu_images" data-filter=".rolls">Роли</a>
 							</li>
 						</ul>
 					</nav>
@@ -211,20 +159,20 @@
 								</div>
 							</div>
 							<div class="col-7">
-								<h4>Lorem ipsum dolor sit amet</h4>
+								<h4>Качина грудка на яблуках під журавлиним соусом</h4>
 								<p>
 									Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi, obcaecati! Sapiente laudantium.
 								</p>
 							</div>
 							<div class="col-2">
 								<div class="section_menu__item__price text-center">
-									$15
+									₴110
 								</div>
 							</div>
 						</div> <!-- / .row -->
 					</div>
 				</div>
-				<div class="col-md-6 section_menu__grid__item lunch">
+				<div class="col-md-6 section_menu__grid__item salad">
 					<div class="section_menu__item">
 						<div class="row">
 							<div class="col-3 align-self-center">
@@ -233,20 +181,20 @@
 								</div>
 							</div>
 							<div class="col-7">
-								<h4>Fusce id ante ut arcu</h4>
+								<h4>Легендарний Цезар з куркою</h4>
 								<p>
 									Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi, obcaecati! Sapiente laudantium.
 								</p>
 							</div>
 							<div class="col-2">
 								<div class="section_menu__item__price text-center">
-									$23
+									₴100
 								</div>
 							</div>
 						</div> <!-- / .row -->
 					</div>
 				</div>
-				<div class="col-md-6 section_menu__grid__item dinner">
+				<div class="col-md-6 section_menu__grid__item pizza">
 					<div class="section_menu__item">
 						<div class="row">
 							<div class="col-3 align-self-center">
@@ -255,20 +203,20 @@
 								</div>
 							</div>
 							<div class="col-7">
-								<h4>Fusce sed dolor eget tortor</h4>
+								<h4>Капрічоза</h4>
 								<p>
-									Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi, obcaecati! Sapiente laudantium.
+									Сир, оливки, шинка, печериці
 								</p>
 							</div>
 							<div class="col-2">
 								<div class="section_menu__item__price text-center">
-									$16
+									₴130
 								</div>
 							</div>
 						</div> <!-- / .row -->
 					</div>
 				</div>
-				<div class="col-md-6 section_menu__grid__item drinks">
+				<div class="col-md-6 section_menu__grid__item rolls">
 					<div class="section_menu__item">
 						<div class="row">
 							<div class="col-3 align-self-center">
@@ -277,20 +225,20 @@
 								</div>
 							</div>
 							<div class="col-7">
-								<h4>Phasellus non elit in dolor</h4>
+								<h4>Філадельфія</h4>
 								<p>
-									Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi, obcaecati! Sapiente laudantium.
+									Лосось, вершковий сир, огірок, авокадо, норі, рис
 								</p>
 							</div>
 							<div class="col-2">
 								<div class="section_menu__item__price text-center">
-									$10
+									₴150
 								</div>
 							</div>
 						</div> <!-- / .row -->
 					</div>
 				</div>
-				<div class="col-md-6 section_menu__grid__item drinks">
+				<div class="col-md-6 section_menu__grid__item rolls">
 					<div class="section_menu__item">
 						<div class="row">
 							<div class="col-3 align-self-center">
@@ -299,20 +247,20 @@
 								</div>
 							</div>
 							<div class="col-7">
-								<h4>In vel odio eu massa semper</h4>
+								<h4>Філадельфія з тунцем</h4>
 								<p>
-									Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi, obcaecati! Sapiente laudantium.
+									Тунець, вершковий сир, авокадо, норі, рис, тобіко чорне
 								</p>
 							</div>
 							<div class="col-2">
 								<div class="section_menu__item__price text-center">
-									$35
+									₴120
 								</div>
 							</div>
 						</div> <!-- / .row -->
 					</div>
 				</div>
-				<div class="col-md-6 section_menu__grid__item dinner">
+				<div class="col-md-6 section_menu__grid__item pizza">
 					<div class="section_menu__item">
 						<div class="row">
 							<div class="col-3 align-self-center">
@@ -321,20 +269,20 @@
 								</div>
 							</div>
 							<div class="col-7">
-								<h4>Morbi ac est consectetur</h4>
+								<h4>Гостра</h4>
 								<p>
-									Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi, obcaecati! Sapiente laudantium.
+									Сир, шинка, салямі, перець болгарський, перець чілі, рукола
 								</p>
 							</div>
 							<div class="col-2">
 								<div class="section_menu__item__price text-center">
-									$18
+									₴145
 								</div>
 							</div>
 						</div> <!-- / .row -->
 					</div>
 				</div>
-				<div class="col-md-6 section_menu__grid__item lunch">
+				<div class="col-md-6 section_menu__grid__item pizza">
 					<div class="section_menu__item">
 						<div class="row">
 							<div class="col-3 align-self-center">
@@ -343,14 +291,14 @@
 								</div>
 							</div>
 							<div class="col-7">
-								<h4>Lorem ipsum dolor sit amet</h4>
+								<h4>Камамбер</h4>
 								<p>
-									Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi, obcaecati! Sapiente laudantium.
+									Сир Камамбер, сир Моцарелла, шпинат, гранат, мед
 								</p>
 							</div>
 							<div class="col-2">
 								<div class="section_menu__item__price text-center">
-									$15
+									₴150
 								</div>
 							</div>
 						</div> <!-- / .row -->
@@ -365,14 +313,14 @@
 								</div>
 							</div>
 							<div class="col-7">
-								<h4>Fusce id ante ut arcu</h4>
+								<h4>Стейк свинний під соусом деміглас</h4>
 								<p>
 									Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi, obcaecati! Sapiente laudantium.
 								</p>
 							</div>
 							<div class="col-2">
 								<div class="section_menu__item__price text-center">
-									$23
+									₴100
 								</div>
 							</div>
 						</div> <!-- / .row -->
@@ -387,20 +335,20 @@
 								</div>
 							</div>
 							<div class="col-7">
-								<h4>Fusce sed dolor eget tortor</h4>
+								<h4>Сковорідка м'ясна на компанію</h4>
 								<p>
 									Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi, obcaecati! Sapiente laudantium.
 								</p>
 							</div>
 							<div class="col-2">
 								<div class="section_menu__item__price text-center">
-									$16
+									₴220
 								</div>
 							</div>
 						</div> <!-- / .row -->
 					</div>
 				</div>
-				<div class="col-md-6 section_menu__grid__item lunch">
+				<div class="col-md-6 section_menu__grid__item pizza">
 					<div class="section_menu__item">
 						<div class="row">
 							<div class="col-3 align-self-center">
@@ -409,20 +357,20 @@
 								</div>
 							</div>
 							<div class="col-7">
-								<h4>Phasellus non elit in dolor</h4>
+								<h4>Цезаре</h4>
 								<p>
-									Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi, obcaecati! Sapiente laudantium.
+									Сир, шинка, бекон, пармезан, помідор чері, яйце, салат айзберг
 								</p>
 							</div>
 							<div class="col-2">
 								<div class="section_menu__item__price text-center">
-									$10
+									₴145
 								</div>
 							</div>
 						</div> <!-- / .row -->
 					</div>
 				</div>
-				<div class="col-md-6 section_menu__grid__item dinner">
+				<div class="col-md-6 section_menu__grid__item pizza">
 					<div class="section_menu__item">
 						<div class="row">
 							<div class="col-3 align-self-center">
@@ -431,20 +379,20 @@
 								</div>
 							</div>
 							<div class="col-7">
-								<h4>In vel odio eu massa semper</h4>
+								<h4>Мисливська</h4>
 								<p>
-									Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi, obcaecati! Sapiente laudantium.
+									Сир, мисливські ковбаски, цибуля, оливки, печериці
 								</p>
 							</div>
 							<div class="col-2">
 								<div class="section_menu__item__price text-center">
-									$35
+									₴145
 								</div>
 							</div>
 						</div> <!-- / .row -->
 					</div>
 				</div>
-				<div class="col-md-6 section_menu__grid__item drinks">
+				<div class="col-md-6 section_menu__grid__item rolls">
 					<div class="section_menu__item">
 						<div class="row">
 							<div class="col-3 align-self-center">
@@ -453,14 +401,14 @@
 								</div>
 							</div>
 							<div class="col-7">
-								<h4>Morbi ac est consectetur</h4>
+								<h4>Темпура з крабом</h4>
 								<p>
-									Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi, obcaecati! Sapiente laudantium.
+									Огірок, краб, вершковий сир, рис, норі, паніровка
 								</p>
 							</div>
 							<div class="col-2">
 								<div class="section_menu__item__price text-center">
-									$18
+									₴110
 								</div>
 							</div>
 						</div> <!-- / .row -->
@@ -475,20 +423,20 @@
 								</div>
 							</div>
 							<div class="col-7">
-								<h4>Lorem ipsum dolor sit amet</h4>
+								<h4>Ковбаска по-бердичівськи власного виробництва з овочами гриль і соусом барбек'ю</h4>
 								<p>
 									Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi, obcaecati! Sapiente laudantium.
 								</p>
 							</div>
 							<div class="col-2">
 								<div class="section_menu__item__price text-center">
-									$15
+									₴220
 								</div>
 							</div>
 						</div> <!-- / .row -->
 					</div>
 				</div>
-				<div class="col-md-6 section_menu__grid__item lunch">
+				<div class="col-md-6 section_menu__grid__item pizza">
 					<div class="section_menu__item">
 						<div class="row">
 							<div class="col-3 align-self-center">
@@ -497,20 +445,20 @@
 								</div>
 							</div>
 							<div class="col-7">
-								<h4>Fusce id ante ut arcu</h4>
+								<h4>Чотири сири</h4>
 								<p>
-									Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi, obcaecati! Sapiente laudantium.
+									Сир Горгонзола, сир Моцарелла, сир Брі, сир Беко, груша, горіхи
 								</p>
 							</div>
 							<div class="col-2">
 								<div class="section_menu__item__price text-center">
-									$23
+									₴160
 								</div>
 							</div>
 						</div> <!-- / .row -->
 					</div>
 				</div>
-				<div class="col-md-6 section_menu__grid__item dinner">
+				<div class="col-md-6 section_menu__grid__item salad">
 					<div class="section_menu__item">
 						<div class="row">
 							<div class="col-3 align-self-center">
@@ -519,20 +467,20 @@
 								</div>
 							</div>
 							<div class="col-7">
-								<h4>Fusce sed dolor eget tortor</h4>
+								<h4>Салат з персиком і прошутто</h4>
 								<p>
 									Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi, obcaecati! Sapiente laudantium.
 								</p>
 							</div>
 							<div class="col-2">
 								<div class="section_menu__item__price text-center">
-									$16
+									₴120
 								</div>
 							</div>
 						</div> <!-- / .row -->
 					</div>
 				</div>
-				<div class="col-md-6 section_menu__grid__item drinks">
+				<div class="col-md-6 section_menu__grid__item rolls">
 					<div class="section_menu__item">
 						<div class="row">
 							<div class="col-3 align-self-center">
@@ -541,20 +489,20 @@
 								</div>
 							</div>
 							<div class="col-7">
-								<h4>Phasellus non elit in dolor</h4>
+								<h4>Фудзіяма</h4>
 								<p>
-									Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi, obcaecati! Sapiente laudantium.
+									Креветки, тобіко червоне, норі, рис, вершковий сир, огірок, кунжут мішаний
 								</p>
 							</div>
 							<div class="col-2">
 								<div class="section_menu__item__price text-center">
-									$10
+									₴100
 								</div>
 							</div>
 						</div> <!-- / .row -->
 					</div>
 				</div>
-				<div class="col-md-6 section_menu__grid__item drinks">
+				<div class="col-md-6 section_menu__grid__item rolls">
 					<div class="section_menu__item">
 						<div class="row">
 							<div class="col-3 align-self-center">
@@ -563,20 +511,20 @@
 								</div>
 							</div>
 							<div class="col-7">
-								<h4>In vel odio eu massa semper</h4>
+								<h4>Філадельфія з вугрем</h4>
 								<p>
-									Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi, obcaecati! Sapiente laudantium.
+									Вугор, вершковий сир, авокадо, оігрок, норі, рис, унагі соус
 								</p>
 							</div>
 							<div class="col-2">
 								<div class="section_menu__item__price text-center">
-									$35
+									₴160
 								</div>
 							</div>
 						</div> <!-- / .row -->
 					</div>
 				</div>
-				<div class="col-md-6 section_menu__grid__item dinner">
+				<div class="col-md-6 section_menu__grid__item salad">
 					<div class="section_menu__item">
 						<div class="row">
 							<div class="col-3 align-self-center">
@@ -585,20 +533,20 @@
 								</div>
 							</div>
 							<div class="col-7">
-								<h4>Morbi ac est consectetur</h4>
+								<h4>Салат з сиром Брі, свіжими овочами та морепродуктими</h4>
 								<p>
 									Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi, obcaecati! Sapiente laudantium.
 								</p>
 							</div>
 							<div class="col-2">
 								<div class="section_menu__item__price text-center">
-									$18
+									₴100
 								</div>
 							</div>
 						</div> <!-- / .row -->
 					</div>
 				</div>
-				<div class="col-md-6 section_menu__grid__item lunch">
+				<div class="col-md-6 section_menu__grid__item salad">
 					<div class="section_menu__item">
 						<div class="row">
 							<div class="col-3 align-self-center">
@@ -607,14 +555,14 @@
 								</div>
 							</div>
 							<div class="col-7">
-								<h4>Lorem ipsum dolor sit amet</h4>
+								<h4>Брускетта з смородиновими конфітюрами, горішками кеш'ю і горгонзолою</h4>
 								<p>
 									Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi, obcaecati! Sapiente laudantium.
 								</p>
 							</div>
 							<div class="col-2">
 								<div class="section_menu__item__price text-center">
-									$15
+									₴75
 								</div>
 							</div>
 						</div> <!-- / .row -->
@@ -629,14 +577,14 @@
 								</div>
 							</div>
 							<div class="col-7">
-								<h4>Fusce id ante ut arcu</h4>
+								<h4>Паста 4 сири</h4>
 								<p>
-									Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi, obcaecati! Sapiente laudantium.
+									Lorem ipsum dolor sit amet, consectetur adipisicing elit.
 								</p>
 							</div>
 							<div class="col-2">
 								<div class="section_menu__item__price text-center">
-									$23
+									₴100
 								</div>
 							</div>
 						</div> <!-- / .row -->
@@ -651,20 +599,20 @@
 								</div>
 							</div>
 							<div class="col-7">
-								<h4>Fusce sed dolor eget tortor</h4>
+								<h4>Тилапія під білим соусом з оливковим топенадом</h4>
 								<p>
 									Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi, obcaecati! Sapiente laudantium.
 								</p>
 							</div>
 							<div class="col-2">
 								<div class="section_menu__item__price text-center">
-									$16
+									₴65
 								</div>
 							</div>
 						</div> <!-- / .row -->
 					</div>
 				</div>
-				<div class="col-md-6 section_menu__grid__item lunch">
+				<div class="col-md-6 section_menu__grid__item salad">
 					<div class="section_menu__item">
 						<div class="row">
 							<div class="col-3 align-self-center">
@@ -673,20 +621,20 @@
 								</div>
 							</div>
 							<div class="col-7">
-								<h4>Phasellus non elit in dolor</h4>
+								<h4>Печінковий мус у вигляді ескімо</h4>
 								<p>
 									Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi, obcaecati! Sapiente laudantium.
 								</p>
 							</div>
 							<div class="col-2">
 								<div class="section_menu__item__price text-center">
-									$10
+									₴100
 								</div>
 							</div>
 						</div> <!-- / .row -->
 					</div>
 				</div>
-				<div class="col-md-6 section_menu__grid__item dinner">
+				<div class="col-md-6 section_menu__grid__item salad">
 					<div class="section_menu__item">
 						<div class="row">
 							<div class="col-3 align-self-center">
@@ -695,20 +643,20 @@
 								</div>
 							</div>
 							<div class="col-7">
-								<h4>In vel odio eu massa semper</h4>
+								<h4>Лембургер (картопляний бургер)</h4>
 								<p>
 									Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi, obcaecati! Sapiente laudantium.
 								</p>
 							</div>
 							<div class="col-2">
 								<div class="section_menu__item__price text-center">
-									$35
+									₴55
 								</div>
 							</div>
 						</div> <!-- / .row -->
 					</div>
 				</div>
-				<div class="col-md-6 section_menu__grid__item drinks">
+				<div class="col-md-6 section_menu__grid__item rolls">
 					<div class="section_menu__item">
 						<div class="row">
 							<div class="col-3 align-self-center">
@@ -717,14 +665,14 @@
 								</div>
 							</div>
 							<div class="col-7">
-								<h4>Morbi ac est consectetur</h4>
+								<h4>Сет - мікс</h4>
 								<p>
-									Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi, obcaecati! Sapiente laudantium.
+									Філадельфія, секе-маки, секе-авокадо-маки, сирний
 								</p>
 							</div>
 							<div class="col-2">
 								<div class="section_menu__item__price text-center">
-									$18
+									₴370
 								</div>
 							</div>
 						</div> <!-- / .row -->
@@ -746,7 +694,7 @@
 					
 					<!-- Heading -->
 					<h2 class="section__heading text-center">
-						Featured dishes
+						Рекомендовані страви
 					</h2>
 
 					<!-- Subheading -->
@@ -937,7 +885,7 @@
 	
 					<!-- Heading -->
 					<h2 class="section__heading text-center">
-						What clients say about us
+						Що клієнти говорять про нас
 					</h2>
 
 					<!-- Subheading -->
@@ -965,10 +913,10 @@
 									<!-- Blockquote -->
 									<blockquote class="section_testimonials__blockquote mx-auto">
 										<p>
-											Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos at veritatis vitae modi ex quis quibusdam error repudiandae adipisci dolore perspiciatis iste, vel fuga a, libero architecto ratione deleniti sequi.
+											Гарний заклад в центрі Добромиля, приємна і уважна обслуга. Замовляли суші, дуже задоволені, адже вони досить великі розміром і смачні,  мають цікаве і оригінальне оформлення,ще раз дякуємо
 										</p>
 										<footer class="text-muted">
-											Richard Roe
+											Maria Zozylkina
 										</footer>
 									</blockquote>
 
@@ -991,10 +939,10 @@
 									<!-- Blockquote -->
 									<blockquote class="section_testimonials__blockquote mx-auto">
 										<p>
-											Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos at veritatis vitae modi ex quis quibusdam error repudiandae adipisci dolore perspiciatis iste, vel fuga a, libero architecto ratione deleniti sequi.
+											Були в "Оксані" не одноразово. По 5-ти бальний шкалі сміло можна дати 5+!!! Дякуємо п.Лесі та шеф.повару Марії .Рекомендую!!!
 										</p>
 										<footer class="text-muted">
-											Elisabeth Doe
+											Світлана Гвоздьова
 										</footer>
 									</blockquote>
 
@@ -1365,74 +1313,14 @@
 	<!-- MAP
 	================================================== -->
 	<section class="section section_map">
-		<div class="section_map__map" data-lat="40.7590403" data-lng="-74.0392713" data-zoom="12" data-info="<h4 class='section_map__map__heading text-center'>Touche restaurant</h4><p class='section_map__map__content text-center text-muted'>1234 Altschul, New York, NY 10027-0000<br>+1 987 654 3210</p>"></div>
+		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2000.9147809159906!2d22.78482089100483!3d49.57166897440298!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x473b9aa08114a37f%3A0x7f31824b43df14e2!2sOksana!5e0!3m2!1sen!2sua!4v1589289746417!5m2!1sen!2sua" width="100%" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
 	</section>
 
 	<!-- FOOTER
 	================================================== -->
-	<footer class="section section_footer">
-		<div class="container">
-			<div class="row">
-				<div class="col-sm-4">
-				
-					<!-- About Us -->
-					<h5 class="section_footer__heading">
-						Про нас
-					</h5>
-					<p>
-						Ресторан «Оксана» – це оригінальне місце в центрі Добромиля, де у затишній атмосфері можна скуштувати найсмачніші страви та приємно провести час. Стильний інтер’єр, зручні меблі, цікаві елементи декору створюють особливий настрій та дозволяють почуватися комфортно кожному гостю. Тут хочеться мріяти і повертатись знову.
-					</p>
-
-				</div>
-				<div class="col-sm-4">
-				
-					<!-- Contact info -->
-					<h5 class="section_footer__heading">
-						Контакти
-					</h5>
-					<ul class="section_footer__info">
-						<li>
-							<i class="fas fa-map-marker-alt"></i> Л.Українки 1а, Добромиль, Львівська область
-						</li>
-						<li>
-							<i class="fas fa-phone"></i> +380 (98) 016 64 64
-						</li>
-						<li>
-							<i class="far fa-envelope"></i> <a href="mailto:admin@domain.com">admin@domain.com</a>
-						</li>
-					</ul>
-
-				</div>
-				<div class="col-sm-4">
-				
-					<!-- Opening hours -->
-					<h5 class="section_footer__heading">
-						Години роботи
-					</h5>
-					<div class="section_footer__open">
-						<div class="section_footer__open__days">Понеділок - П'ятниця</div>
-						<div class="section_footer__open__time">11:00 - 23:00</div>
-					</div>
-					<div class="section_footer__open">
-						<div class="section_footer__open__days">Субота - Неділя</div>
-						<div class="section_footer__open__time">11:00 - 02:00</div>
-					</div>
-
-				</div>
-			</div> <!-- / .row -->
-			<div class="row">
-				<div class="col-12">
-				
-					<!-- Copyright -->
-					<div class="section_footer__copyright">
-						&copy; <span id="js-current-year"></span> Mykola Halushko. All rights reserved.
-					</div>
-
-				</div>
-			</div> <!-- / .row -->
-		</div> <!-- / .container -->
-	</footer>
-
+	{% block footer %}
+	{% include 'include/footer.html' %}
+	{% endblock footer %}
 	<!-- JAVASCRIPT
 	================================================== -->
 

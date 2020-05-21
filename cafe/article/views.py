@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect
 from django.http import HttpResponse
-from django.views.generic import ListView, CreateView, DetailView, UpdateView, DeleteView
+from django.views.generic import ListView, CreateView, DetailView, UpdateView, DeleteView, View
 from article.models import Article
 from article.forms import ArticleForm
 from django.urls import reverse
@@ -50,3 +50,8 @@ class ArticleDeleteView(DeleteView):
     template_name = 'article/delete.html'
     success_url = '/'
     pk_url_kwarg = 'article_id'
+
+#class DisplayView(View):
+    #template_name = 'news-and-events.html'
+    #def get_queryset(self):
+        #return Article.objects.all()

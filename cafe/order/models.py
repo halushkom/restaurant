@@ -1,5 +1,6 @@
 from django.db import models
 
+
 class Order(models.Model):
     Name = models.CharField(max_length=50, null=True)
     PhoneNumber = models.CharField(max_length=13)
@@ -9,3 +10,6 @@ class Order(models.Model):
     Mail = models.EmailField(max_length=100, null=True)
     def __str__(self):
         return self.Name
+    class Meta:
+        verbose_name = 'Замовлення'
+        verbose_name_plural = 'Замовлення'

@@ -6,3 +6,5 @@ class Contact(models.Model):
     Message = models.TextField(max_length = 500, null = True )
     def __str__(self):
         return self.Name
+    class Meta():
+        verbose_name_plural = "Форма зворотнього зв'язку"

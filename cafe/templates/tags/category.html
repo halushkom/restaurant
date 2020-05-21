@@ -1,0 +1,21 @@
+{% for category in categories %}
+
+	<ul style="padding-left: 0;list-style-type: none;" >
+		<li style="display: inline-block;">
+			<a class="nav" href="{{ category.get_absolute_url }}" >{{ category.name }}</a>
+		</li>
+	</ul>
+
+{% endfor%}
+<style>
+a {
+
+transition: color .1s;
+padding: 1rem 1rem;
+display: inline-block;
+position: relative;
+
+letter-spacing: .05em;
+color: #777;
+}
+</style>

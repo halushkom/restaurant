@@ -1,0 +1,51 @@
+<nav class="navbar navbar-light navbar-expand-lg fixed-top">
+		<div class="container">
+
+			<!-- Navbar: Brand -->
+			<a class="navbar-brand d-lg-none" href="{% url 'index' %}">Оксана</a>
+
+			<!-- Navbar: Toggler -->
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+
+			<!-- Navbar: Collapse -->
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+				<!-- Navbar navigation: Left -->
+				<ul class="navbar-nav mr-auto">
+					<li class="nav-item">
+						<a class="nav-link" href="{% url 'about-us' %}">Про нас</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="{% url 'menu' %}">Меню</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="{% url 'reservation' %}">Зарезервувати</a>
+					</li>
+				</ul>
+
+				<!-- Navbar: Brand -->
+				<a class="navbar-brand d-none d-lg-flex" href="{% url 'index' %}">
+					Оксана
+				</a>
+
+				<!-- Navbar navigation: Right -->
+				<ul class="navbar-nav ml-auto">
+					<!--
+					<li class="nav-item">
+						<a class="nav-link" href="news-and-events.html">Новини & Події</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="gallery.html">Галерея</a>
+					</li>
+					-->
+					<li class="nav-item">
+						<a class="nav-link" href="{% url 'contact-us' %}">Контакти</a>
+					</li>
+				</ul>
+
+			</div> <!-- / .navbar-collapse -->
+
+		</div> <!-- / .container -->
+	</nav> <!-- / .navbar -->

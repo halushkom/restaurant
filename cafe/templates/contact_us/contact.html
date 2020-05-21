@@ -1,7 +1,29 @@
-<form action = "{% url 'contact' %}" method = "post">
-    {% csrf_token %}
 
-        {{ form.as_p }}
+<style>
+table, th, td {
+   border: 1px solid black;
+  border-collapse: collapse;
+}
+th, td {
+  padding: 5px;
+}
+th {
+  text-align: left;
+}
+</style>
 
-    <button type="submit">Підтвердити</button>
-</form>
+    {% for contact in contactss %}
+    <table style="width:100%">
+        <tr>
+            <th>Ім'я</th>
+            <th>Mail</th>
+            <th>Message</th>
+        </tr>
+        <tr>
+            <td><a href="{% url 'order_detail' order.id %}">{{ contact.Name }} </a>
+            <td>{{ contact.Mail }}</td>
+            <td>{{ contact.Message }}</td>
+        </tr>
+    </table>
+
+    {% endfor %}

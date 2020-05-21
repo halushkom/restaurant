@@ -1,0 +1,30 @@
+{% extends 'menu/menu.html' %}
+{meal.first.name}
+{% block content %}
+{% for Meal in dishes %}
+				<div class="col-md-6 section_menu__grid__item">
+					<div class="section_menu__item">
+						<div class="row">
+							<div class="col-3 align-self-center">
+								<div class="section_menu__item__img">
+                                    {% if Meal.image %}
+									<img src="{{ Meal.image.url }}" alt="...">
+                                    {% endif %}
+								</div>
+							</div>
+							<div class="col-7">
+								<h4>{{ Meal.name }}</h4>
+								<p>
+									{{ Meal.description }}
+								</p>
+							</div>
+							<div class="col-2">
+								<div class="section_menu__item__price text-center">
+                                    {{ Meal.price }}₴
+								</div>
+							</div>
+						</div> <!-- / .row -->
+					</div>
+				</div>
+    {% endfor %}
+{% endblock %}
